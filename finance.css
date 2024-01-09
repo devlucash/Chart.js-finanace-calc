@@ -1,0 +1,172 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:500');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    background-color: #24252a;
+  }
+
+li, a, button {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    color: #edf0f1;
+    text-decoration: none;
+}
+  
+header {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 30px 20px;
+    
+    }
+
+.logo {
+    cursor: pointer;
+    margin-right: auto;
+    width: auto;
+    height: 5em;
+}
+
+.twitterlogo {
+    cursor: pointer;
+    margin-right: auto;
+    width: 5em;
+    height: 5em;
+    transition: all 0.3s ease 0s;
+}
+
+.twitterlogo:hover {
+    background-color: rgba(153, 153, 153, 0.8);
+}
+
+.instagramlogo {
+    cursor: pointer;
+    margin-right: auto;
+    width: 5em;
+    height: 5em;
+    transition: all 0.3s ease 0s;
+}
+
+.instagramlogo:hover {
+    background-color: rgba(153, 153, 153, 0.8);
+}
+
+.linkedinlogo {
+    cursor: pointer;
+    margin-right: auto;
+    width: 5em;
+    height: 5em;
+    transition: all 0.3s ease 0s;
+}
+
+.linkedinlogo:hover {
+    background-color: rgba(153, 153, 153, 0.8);
+}
+
+.nav__links {
+    list-style: none;
+
+}
+
+.nav__links li {
+    display: inline-block;
+    padding: 0px 20px;
+}
+
+.nav__links li a {
+    transition: all 0.3s ease 0s;
+}
+
+.nav__links li a:hover {
+    color: #0088a9; 
+}
+
+button {
+    margin-left: 20px;
+    margin-right: 20px;
+    padding: 9px 30px;
+    background-color: rgb(36, 37, 42); 
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+}
+
+button:hover {
+    background-color: rgba(0, 136, 169, 0.8);  /* colour of button when hovered */
+}
+
+  
+section{
+    text-align: center;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    color: #edf0f1;
+    text-decoration: none;
+}
+
+
+.social__links li {
+    display: inline-block;
+    padding: 10px 20px;
+}
+
+h3  {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    font-size: 50px;
+    color: #edf0f1;
+    text-decoration: none;
+    margin-top: 50px;
+}
+
+#timeline {
+    margin: 50px;
+}
+
+#projects li {
+    margin: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 20px;
+}
+
+.rectangle {
+    width: 200px; 
+    height: 500px; 
+    background-color: #686868; 
+    margin-top: 50%;
+  }
+
+.text {
+    margin-top: 100px;
+    display: flex;
+    align-items: center;
+  }
+
+
+
+.minirectangle {
+    width: 50px; 
+    height: 50px; 
+    background-color: #1f1f1f;
+    justify-content: center;
+    display: inline-block;
+    margin: 20px;
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
+}
+
+.minirectangle:hover {
+    background-color: rgba(0, 136, 169, 0.8); 
+}
+
+.minirectangle:active  {
+    background-color: rgba(0, 136, 169, 0.8); 
+}
+
