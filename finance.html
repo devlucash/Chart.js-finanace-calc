@@ -7,6 +7,7 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="finance.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
   <script src="finance.js"></script>
 </head>
 <body>
@@ -26,9 +27,52 @@
   </header>
 
   <main>
-
+    
     <section>
       <h1>Calculators</h1>
+      <h3>Savings Calculator</h3>
+      <div class="calculator-container">
+        <div class="input-container">
+            <form class="form-container">
+                <label for="initialAmount">Initial Amount ($):</label>
+                <input type="number" id="initialAmount" value="5000" required>
+        
+                <label for="investmentPeriod">Investment Period (years):</label>
+                <input type="number" id="investmentPeriod" value="10" required>
+        
+                <label for="interestRate">Interest Rate:</label>
+                <span id="interestRateLabel">5%</span>
+                <input type="range" id="interestRate" min="0" max="0.15" step="0.0005" value="0.05" required>
+
+                <label for="compoundInterval">Contribution Interval:</label>
+                <select id="compoundInterval" required>
+                    <option value="annually">Annually</option>
+                    <option value="monthly">Monthly</option>
+                    <option value="weekly">Weekly</option>
+                    <option value="daily">daily</option>
+                </select>
+
+                <label for="contributionAmount">Contribution Amount ($):</label>
+                <input type="number" id="contributionAmount" value="100" required>
+        
+                <button id="calculateButton" type="button" onclick="updateChart()">Calculate</button>
+            </form>
+            
+        
+        </div>
+        
+        <div class="output-container">
+            <canvas id="data-set"></canvas>
+        </div>
+      </div>
+      <h3>Offset Calculator</h3>
+      <div class="calculator-container">
+
+      </div>
+      <h3>Morgage Repayments Calculator</h3>
+      <div class="calculator-container">
+
+      </div>
   
 
     </section>

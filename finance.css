@@ -118,7 +118,7 @@ section{
 h3  {
     font-family: "Montserrat", sans-serif;
     font-weight: 500;
-    font-size: 50px;
+    font-size: 16px;
     color: #edf0f1;
     text-decoration: none;
     margin-top: 50px;
@@ -168,5 +168,80 @@ h3  {
 
 .minirectangle:active  {
     background-color: rgba(0, 136, 169, 0.8); 
+}
+
+.calculator-container {
+    display: flex;
+    border: 2px solid #ccc;
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.input-container {
+    box-sizing: border-box;
+    /* border: 2px solid #ccc; */
+    padding: 10px;
+    border-radius: 10px;
+    margin-left: 20px;
+    width: 30%;
+    margin-bottom: 20px;
+}
+.output-container {
+    flex: 1;
+    box-sizing: border-box;
+    /* border: 2px solid #ccc; */
+    padding: 10px;
+    border-radius: 10px;
+    margin-left: 20px;
+    margin-bottom: 20px;
+    width: auto;
+    margin-right: 20px;
+}
+
+.form-container label {
+    display: flex;
+    margin-bottom: 5px;
+    color: white;
+}
+
+.form-container input {
+    display: flex;
+    margin-bottom: 10px;
+    color: white;
+    padding: 8px;
+    margin-bottom: 10px;
+    width: 100%;
+    box-sizing: border-box;
+    /* border: 1px solid #ccc; */
+    border-radius: 4px;
+}
+
+.form-container select {
+    display: flex;
+    margin-bottom: 10px;
+    color: white;
+    padding: 8px;
+    margin-bottom: 10px;
+    width: 100%;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.form-container button {
+    margin-left: auto;  /* Set left margin to auto */
+    margin-right: auto;  /* Set right margin to auto */
+    font-size: 16px;
+    cursor: pointer;
+    display: flex;
+    margin-bottom: 10px;
+    border: 2px solid #ccc;
+}
+
+.output-container canvas {
+    width: auto;
+    margin-right: 20px;
 }
 
