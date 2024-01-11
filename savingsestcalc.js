@@ -88,12 +88,38 @@ function calculateDataPoints(initialAmount, interestRate, contributionAmount, co
     const effectiveInterestRate = (1 + interestRate / periodsPerYear) ** periodsPerYear - 1;
 
     for (let i = 0; i <= investmentPeriod * periodsPerYear; i++) {
-        values.push(currentValue);
-        currentValue = calculateCompoundInterest(currentValue, effectiveInterestRate, contributionAmount, periodsPerYear);
+        if (getPeriodsPerYear(contributionInterval) === 1) {
+            values.push(currentValue);
+            currentValue = calculateCompoundInterest(currentValue, effectiveInterestRate, contributionAmount, periodsPerYear);
+        }
+        if (getPeriodsPerYear(contributionInterval) === 12) {
+            if (i % 12 === 0) {
+                values.push(currentValue);
+                currentValue = calculateCompoundInterest(currentValue, effectiveInterestRate, contributionAmount, periodsPerYear);
+            }
+        }
+        if (getPeriodsPerYear(contributionInterval) === 26) {
+            if (i % 26 === 0) {
+                values.push(currentValue);
+                currentValue = calculateCompoundInterest(currentValue, effectiveInterestRate, contributionAmount, periodsPerYear);
+            }
+        }
+        if (getPeriodsPerYear(contributionInterval) === 52) {
+            if (i % 52 === 0) {
+                values.push(currentValue);
+                currentValue = calculateCompoundInterest(currentValue, effectiveInterestRate, contributionAmount, periodsPerYear);
+            }
+        }
+        if (getPeriodsPerYear(contributionInterval) === 365) {
+            if (i % 365 === 0) {
+                values.push(currentValue);
+                currentValue = calculateCompoundInterest(currentValue, effectiveInterestRate, contributionAmount, periodsPerYear);
+            }
+        }
     }
-
     return values;
 }
+
 
 
 function calculateCompoundInterest(principal, interestRate, contributionAmount, periodsPerYear) {
