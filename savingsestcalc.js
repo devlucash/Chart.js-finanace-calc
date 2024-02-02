@@ -1,10 +1,15 @@
 let compoundChart; // Declare the variable globally
-//const calculateButton = document.getElementById('calculateButton'); // Moved the declaration here
 
 window.onload = function () {
+    //StartSavingsCalc() // initialise the savings calc graph and declares variables
+    //drawGraph(10000, 0.05, 100, 'weekly', 5);
+    console.log("Initialised savings calculator graph")
+};
+
+function StartSavingsCalc() {
     const interestRateInput = document.getElementById('interestRate');
     const interestRateLabel = document.getElementById('interestRateLabel');
-    const calculateButton = document.getElementById('calculateButton'); // Moved the declaration here
+    const calculateButton = document.getElementById('savings-calculateButton'); // Moved the declaration here
 
     const initialAmount = 5000;
     const interestRate = 0.05; // 5%
@@ -14,30 +19,38 @@ window.onload = function () {
 
     drawGraph(initialAmount, interestRate, contributionAmount, contributionInterval, investmentPeriod);
 
-    interestRateInput.addEventListener('input', function () {
+    interestRate.addEventListener('input', function () {
         customSlider();
-        drawGraph(initialAmount, parseFloat(interestRateInput.value), contributionAmount, contributionInterval, investmentPeriod);
+        //drawGraph(initialAmount, parseFloat(interestRateInput.value), contributionAmount, contributionInterval, investmentPeriod);
     });
 
     calculateButton.addEventListener('click', function () {
-        // Get other input values
-        const initialAmount = parseFloat(document.getElementById('initialAmount').value);
-        const contributionAmount = parseFloat(document.getElementById('contributionAmount').value);
-        const contributionInterval = document.getElementById('compoundInterval').value;
-        const investmentPeriod = parseFloat(document.getElementById('investmentPeriod').value);
+        // Get input values
+        const initialAmountInput = document.getElementById('initialAmount');
+        const contributionAmountInput = document.getElementById('contributionAmount');
+        const contributionIntervalInput = document.getElementById('compoundInterval');
+        const investmentPeriodInput = document.getElementById('investmentPeriod');
+    
+        // Parse input values as floats
+        const initialAmount = parseFloat(initialAmountInput.value);
+        const contributionAmount = parseFloat(contributionAmountInput.value);
+        const contributionInterval = contributionIntervalInput.value;
+        const investmentPeriod = parseFloat(investmentPeriodInput.value);
 
+        
+    
         // Call drawGraph with updated values
         drawGraph(initialAmount, interestRate, contributionAmount, contributionInterval, investmentPeriod);
     });
 
     function customSlider() {
-        const maxVal = interestRateInput.getAttribute("max");
-        const val = (interestRateInput.value / maxVal) * 15; // Limit the range to 0 to 20
-        const roundedVal = val.toFixed(2) + "%"; // Round to 2 decimal places
+    const maxVal = interestRate.getAttribute("max");
+    const val = (interestRate.value / maxVal) * 15; // Limit the range to 0 to 20
+    const roundedVal = (val * 100).toFixed(2) + "%"; // Convert to percentage format and round to 2 decimal places
 
-        interestRateLabel.innerHTML = roundedVal;
-    }
-};
+    interestRateLabel.innerHTML = roundedVal;
+}
+}
 
 function updateChart() {
     drawGraph();

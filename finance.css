@@ -172,9 +172,9 @@ h3  {
 
 .calculator-container {
     display: flex;
-    border: 2px solid #ccc;
+    /*border-bottom: 2px solid #ccc; */
     padding: 20px;
-    border-radius: 10px;
+    /*border-radius: 10px; border radius not needed for one sided border*/
     margin-top: 20px;
     margin-bottom: 20px;
 }
